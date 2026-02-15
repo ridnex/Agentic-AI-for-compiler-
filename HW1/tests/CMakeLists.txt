@@ -1,0 +1,12 @@
+add_executable(test_lexer test_lexer.cpp)
+target_link_libraries(test_lexer PRIVATE lexer_lib)
+
+add_test(NAME test_keywords COMMAND test_lexer keywords)
+add_test(NAME test_identifiers COMMAND test_lexer identifiers)
+add_test(NAME test_numbers COMMAND test_lexer numbers)
+add_test(NAME test_strings COMMAND test_lexer strings)
+add_test(NAME test_operators COMMAND test_lexer operators)
+add_test(NAME test_punctuation COMMAND test_lexer punctuation)
+add_test(NAME test_whitespace_comments COMMAND test_lexer whitespace_comments)
+add_test(NAME test_edge_fn_name COMMAND test_lexer edge_fn_name)
+add_test(NAME test_edge_eq COMMAND test_lexer edge_eq)
